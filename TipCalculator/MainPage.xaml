@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+    
+    
+    
+    <VerticalStackLayout>
+        <Label Text="Total da conta"/>
+        <Entry x:Name="ContaEntry" 
+               Placeholder="Insira o valor" 
+               Keyboard="Numeric"/>
+        <Label Text="Gorjeta"   />
+        <Label x:Name="GorjetaLabel" 
+               Text="R$ 0.00" />
+
+        <Label Text="Total" />
+        <Label x:Name="ValorTotalLabel" 
+               Text="0.00" />
+
+        <Label Text="Porcentagem de gorjeta" />
+        <Label x:Name="PorcentagemGorjetaLabel" 
+               Text="15%" />
+        <Slider x:Name="PorcentagemSlider" 
+                Minimum="0" 
+                Maximum="100" 
+                Value="15"
+                ValueChanged="PorcentagemSlider_ValueChanged"
+                
+                />
+                
+
+        <Button 
+            x:Name="ArredondarParaBaixoButton"
+            Text="15%" 
+            Clicked="ArredondarParaBaixoButton_Clicked" />
+        <Button 
+            x:Name="ArredondarParaCimaButton"
+            Text="20%" 
+            Clicked="ArredondarParaCimaButton_Clicked" />
+
+        <Button x:Name="roundDown" Text="Round Down" />
+        <Button x:Name="roundUp"   Text="Round Up" />
+    </VerticalStackLayout>
+    
+    
+</ContentPage>
