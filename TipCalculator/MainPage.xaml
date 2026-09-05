@@ -31,13 +31,13 @@
                 
 
         <Button 
-            x:Name="ArredondarParaBaixoButton"
+            x:Name="Gorjeta15PorcentoButton"
             Text="15%" 
-            Clicked="ArredondarParaBaixoButton_Clicked" />
+            Clicked="Gorjeta15PorcentoButton_Clicked" />
         <Button 
-            x:Name="ArredondarParaCimaButton"
+            x:Name="Gorjeta20PorcentoButton"
             Text="20%" 
-            Clicked="ArredondarParaCimaButton_Clicked" />
+            Clicked="Gorjeta20PorcentoButton_Clicked" />
 
         <Button x:Name="roundDown" Text="Round Down" />
         <Button x:Name="roundUp"   Text="Round Up" />
