@@ -11,14 +11,19 @@
 
         private void ArredondarParaCimaButton_Clicked(object sender, EventArgs e)
         {
+            double valorDaConta = Convert.ToDouble(ContaEntry.Text);
             double ValorGorjeta = Convert.ToDouble(GorjetaLabel.Text);
-            GorjetaLabel.Text = Math.Ceiling(ValorGorjeta).ToString();
+            double GorjetaParaCima = Math.Ceiling(ValorGorjeta);
+            ValorTotalLabel.Text = Convert.ToString(valorDaConta + GorjetaParaCima);
+            //PorcentagemGorjetaLabel.Text = ValorGorjeta.ToString();
         }
 
         private void ArredondarParaBaixoButton_Clicked(object sender, EventArgs e)
         {
+            double valorDaConta = Convert.ToDouble(ContaEntry.Text);
             double ValorGorjeta = Convert.ToDouble(GorjetaLabel.Text);
-            GorjetaLabel.Text = Math.Floor(ValorGorjeta).ToString();
+            double GorjetaParaBaixo = Math.Floor(ValorGorjeta);
+            ValorTotalLabel.Text = Convert.ToString(valorDaConta +GorjetaParaBaixo);
 
         }
 
@@ -36,13 +41,14 @@
 
         private void Gorjeta15PorcentoButton_Clicked(object sender, EventArgs e)
         {
-
+            PorcentagemSlider.Value = 15;
         }
 
         private void Gorjeta20PorcentoButton_Clicked(object sender, EventArgs e)
         {
-
+            PorcentagemSlider.Value = 20;
         }
+
     }
 }
 

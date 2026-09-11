@@ -5,43 +5,51 @@
     
     
     
-    <VerticalStackLayout>
-        <Label Text="Total da conta"/>
-        <Entry x:Name="ContaEntry" 
+    <Grid RowDefinitions="Auto,Auto,Auto,*,Auto,Auto,Auto"
+          ColumnDefinitions="*,*"
+          Padding="40">
+        <Label Text="Total da conta" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+        <Entry x:Name="ContaEntry" Grid.Row="0" Grid.Column="1" 
                Placeholder="Insira o valor" 
                Keyboard="Numeric"/>
-        <Label Text="Gorjeta"   />
-        <Label x:Name="GorjetaLabel" 
+        <Label Text="Gorjeta" Grid.Row="1" Grid.Column="0"/>
+        <Label x:Name="GorjetaLabel" Grid.Row="1" Grid.Column="1"
                Text="R$ 0.00" />
 
-        <Label Text="Total" />
-        <Label x:Name="ValorTotalLabel" 
+        <Label Text="Total" Grid.Row="2" Grid.Column="0"/>
+        <Label x:Name="ValorTotalLabel" Grid.Row="2" Grid.Column="1"
                Text="0.00" />
 
-        <Label Text="Porcentagem de gorjeta" />
-        <Label x:Name="PorcentagemGorjetaLabel" 
+        <Label Text="Porcentagem de gorjeta" VerticalOptions="End" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0"/>
+        <Label x:Name="PorcentagemGorjetaLabel" VerticalOptions="End" HorizontalOptions="End" Grid.Row="3" Grid.Column="1"
                Text="15%" />
-        <Slider x:Name="PorcentagemSlider" 
+        <Slider x:Name="PorcentagemSlider" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
                 Minimum="0" 
                 Maximum="100" 
                 Value="15"
                 ValueChanged="PorcentagemSlider_ValueChanged"
                 
                 />
-                
+        <Button 
+            x:Name="ArredondarParaCimaButton" Margin="5" Grid.Row="6" Grid.Column="1"
+            Text="Arredondar Para Cima"
+            Clicked="ArredondarParaCimaButton_Clicked" />
+        <Button 
+            x:Name="ArredondarParaBaixoButton" Margin="5" Grid.Row="6" Grid.Column="0"
+            Text="Arredondar Para Baixo"
+            Clicked="ArredondarParaBaixoButton_Clicked" />
+
 
         <Button 
-            x:Name="Gorjeta15PorcentoButton"
+            x:Name="Gorjeta15PorcentoButton" Margin="5" Grid.Row="5" Grid.Column="0"
             Text="15%" 
             Clicked="Gorjeta15PorcentoButton_Clicked" />
         <Button 
-            x:Name="Gorjeta20PorcentoButton"
+            x:Name="Gorjeta20PorcentoButton" Margin="5" Grid.Row="5" Grid.Column="1"
             Text="20%" 
             Clicked="Gorjeta20PorcentoButton_Clicked" />
 
-        <Button x:Name="roundDown" Text="Round Down" />
-        <Button x:Name="roundUp"   Text="Round Up" />
-    </VerticalStackLayout>
+    </Grid>
     
     
 </ContentPage>
